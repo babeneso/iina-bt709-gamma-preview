@@ -1,0 +1,71 @@
+/* Shared by Preferences, Help and Sidebar. These defaults follow IINA's
+ * injected preference styles; the scoped selectors also work in Sidebar. */
+:root {
+  color-scheme: light dark;
+  --text-color: #222;
+  --secondary-color: rgba(0, 0, 0, 0.55);
+  --separator-color: rgba(128, 128, 128, 0.25);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff;
+    --secondary-color: rgba(255, 255, 255, 0.6);
+  }
+}
+* { box-sizing: border-box; }
+body.plugin-page {
+  margin: 0;
+  padding: 16px;
+  background: transparent;
+  color: var(--text-color);
+  font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  overflow-wrap: break-word;
+}
+.plugin-page h1 { margin: 0 0 16px; font-size: 17px; font-weight: 600; }
+.plugin-page h2 { margin: 24px 0 8px; font-size: 14px; font-weight: 600; }
+.plugin-page p { margin: 0 0 8px; }
+.plugin-page p:last-child { margin-bottom: 0; }
+.plugin-page .pref-section { margin: 0 0 16px; }
+.plugin-page .pref-section:last-child { margin-bottom: 0; }
+.plugin-page .small { font-size: 11px; }
+.plugin-page .secondary { color: var(--secondary-color); }
+.plugin-page .pref-help { margin-top: 4px; }
+.plugin-page fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.plugin-page legend { margin-bottom: 4px; padding: 0; font-size: 14px; font-weight: 600; }
+.plugin-page label { display: flex; align-items: baseline; gap: 8px; margin: 8px 0; }
+.plugin-page [hidden] { display: none; }
+.plugin-page input[type="radio"] { flex-shrink: 0; margin: 0; }
+.plugin-page hr { border: 0; border-top: 1px solid var(--separator-color); margin: 16px 0; }
+.plugin-page code, .plugin-page kbd { font: 0.95em ui-monospace, Menlo, monospace; }
+.plugin-page kbd { white-space: nowrap; }
+.plugin-page table { width: 100%; border-collapse: collapse; }
+.plugin-page th, .plugin-page td { padding: 5px 8px 5px 0; text-align: left; vertical-align: top; }
+.plugin-page th { font-weight: 600; border-bottom: 1px solid var(--separator-color); }
+.plugin-page td:first-child { white-space: nowrap; }
+
+/* Each shortcut is a group of separate keycaps. */
+.plugin-page kbd.shortcut {
+  display: inline-flex;
+  gap: 4px;
+  font: inherit;
+  white-space: nowrap;
+}
+.plugin-page kbd.shortcut > kbd {
+  display: inline-block;
+  min-width: 20px;
+  padding: 0 2px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  background: #f4f4f4;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  color: inherit;
+  font: 12px/1.4 -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+  .plugin-page kbd.shortcut > kbd {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: #383838;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  }
+}

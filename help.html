@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="helpTitle">Help — BT.709 Gamma Preview</title>
+  <link rel="stylesheet" href="ui.css">
+  <script src="i18n.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body class="plugin-page" data-page="help">
+  <main>
+    <h1 data-i18n="appName">BT.709 Gamma Preview</h1>
+    <p data-i18n="helpIntro">Watch BT.709 SDR video with different gamma modes and switch between them during playback to preview how contrast looks in different viewing environments.</p>
+    <hr>
+    <section class="pref-section">
+      <h2 data-i18n="helpICCHeading">Required setting</h2>
+      <p class="secondary" data-i18n-html="iccNote">Enable <strong>Load ICC profile</strong> in <strong>Settings… → Video → Color and HDR</strong> to display the video correctly.</p>
+      <p class="secondary" data-i18n-html="helpICC">When playing supported video (BT.709) with <strong>Load ICC profile</strong> disabled, the plugin displays a reminder dialog. It does not change your settings.</p>
+    </section>
+    <section class="pref-section">
+      <h2 data-i18n="helpPlaybackHeading">Using the plugin</h2>
+      <p class="secondary" data-i18n-html="helpPlayback">Choose a playback gamma in <strong>Menu Bar → Plugins → BT.709 Gamma Preview</strong>. Choose <strong>Show Details in Plugin Panel</strong> to open the sidebar and access the plugin’s controls.</p>
+    </section>
+    <section class="pref-section">
+      <h2 data-i18n="helpShortcutsHeading">Keyboard shortcuts</h2>
+      <table>
+        <thead>
+          <tr class="secondary">
+            <th data-i18n="shortcutHeading">Shortcut</th>
+            <th data-i18n="actionHeading">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd class="shortcut"><kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>0</kbd></kbd></td>
+            <td class="secondary" data-i18n="mode.mpv">BT.1886 (mpv default)</td>
+          </tr>
+          <tr>
+            <td><kbd class="shortcut"><kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>1</kbd></kbd></td>
+            <td class="secondary" data-i18n="mode.qt">Gamma ≈1.961 (QuickTime-like)</td>
+          </tr>
+          <tr>
+            <td><kbd class="shortcut"><kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>2</kbd></kbd></td>
+            <td class="secondary" data-i18n="mode.gamma22">Gamma 2.2</td>
+          </tr>
+          <tr>
+            <td><kbd class="shortcut"><kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>3</kbd></kbd></td>
+            <td class="secondary" data-i18n="mode.gamma24">Gamma 2.4</td>
+          </tr>
+          <tr>
+            <td><kbd class="shortcut"><kbd>⌃</kbd> <kbd>⌥</kbd> <kbd>G</kbd></kbd></td>
+            <td class="secondary" data-i18n="showSidebar">Show Details in Plugin Panel</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="pref-section">
+      <h2 data-i18n="helpDefaultsHeading">Default gamma and playback windows</h2>
+      <p class="secondary" data-i18n-html="helpDefaults">Change the default playback gamma in <strong>Settings… → Plugins → BT.709 Gamma Preview → ⓘ button</strong>. The initial default is <strong>BT.1886 (mpv default)</strong>.</p>
+      <p class="secondary" data-i18n-html="helpWindows">New playback windows use the default from the plugin’s settings. Each window has its own gamma selection and retains it when a new video is loaded in the same window.</p>
+    </section>
+    <section class="pref-section">
+      <h2 data-i18n="helpSupportHeading">Supported video and preview limits</h2>
+      <p class="secondary" data-i18n-html="helpSupport">When IINA identifies a video as BT.709 (for example, a video with NCLC tags <code>1-1-1</code>), you can use this plugin to set its playback gamma. Some Log-encoded videos or videos without NCLC tags may also be identified as BT.709.</p>
+      <p class="secondary" data-i18n-html="helpUnsupported">For unsupported video (such as HDR), the plugin applies no settings that change the video’s appearance and displays <strong>Not applicable to this video</strong>.</p>
+      <p class="secondary" data-i18n-html="helpLimits"><strong>QuickTime-like</strong> is an approximate gamma preview, not an exact reproduction of QuickTime or ColorSync. Results depend on your display and playback configuration; this plugin does not calibrate your display.</p>
+    </section>
+    <section class="pref-section">
+      <h2 data-i18n="helpPermissionsHeading">Required permissions</h2>
+      <p class="secondary" data-i18n-html="helpPermissions">IINA requires <strong>Access the file system</strong> permission to adjust the video’s appearance through its API. However, this plugin <strong>does not</strong> read or write your files, execute external programs, or access the network.</p>
+    </section>
+    <hr>
+    <p class="small secondary" data-i18n-html="helpVersion">Version <code>0.2.0</code> · Requires IINA <code>1.5.0</code> or later.</p>
+    <p class="small secondary">Made with 🩵 by Neso</p>
+  </main>
+</body>
+</html>

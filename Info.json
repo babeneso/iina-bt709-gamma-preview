@@ -1,0 +1,40 @@
+{
+  "name": "BT.709 Gamma Preview",
+  "identifier": "io.github.babeneso.iina-bt709-gamma-preview",
+  "version": "0.2.0",
+  "description": "Watch BT.709 SDR video with various gamma modes and switch between them during playback to preview how contrast looks in different viewing environments.",
+  "author": {
+    "name": "Neso"
+  },
+  "entry": "main.js",
+  "preferencesPage": "preferences.html",
+  "helpPage": "help.html",
+  "preferenceDefaults": {
+    "defaultGamma": "mpv"
+  },
+  "permissions": [
+    "show-osd",
+    "file-system",
+    "show-alert"
+  ],
+  "sidebarTab": {
+    "name": "BT.709 Gamma Preview"
+  },
+  "localized": {
+    "en": {
+      "name": "BT.709 Gamma Preview",
+      "description": "Watch BT.709 SDR video with various gamma modes and switch between them during playback to preview how contrast looks in different viewing environments.",
+      "sidebarTab": {
+        "name": "BT.709 Gamma Preview"
+      }
+    },
+    "zh-Hant": {
+      "name": "BT.709 Gamma 預覽",
+      "description": "以各種 gamma 模式觀看 BT.709 SDR 影片，支援實時切換，方便預覽影片在不同環境下播放時的對比度外觀。",
+      "sidebarTab": {
+        "name": "BT.709 Gamma 預覽"
+      }
+    }
+  },
+  "global": "global.js"
+}

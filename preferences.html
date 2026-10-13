@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="preferencesTitle">Preferences — BT.709 Gamma Preview</title>
+  <link rel="stylesheet" href="ui.css">
+  <script src="i18n.js" defer></script>
+  <script src="ui.js" defer></script>
+</head>
+<body class="plugin-page" data-page="preferences">
+  <main>
+    <section class="pref-section">
+      <fieldset>
+        <legend data-i18n-html="defaultLegend">Default playback gamma for BT.709 video</legend>
+        <label>
+          <input type="radio" data-pref-key name="defaultGamma" value="mpv">
+          <span data-i18n="mode.mpv">BT.1886 (mpv default)</span>
+        </label>
+        <label>
+          <input type="radio" data-pref-key name="defaultGamma" value="qt">
+          <span data-i18n="mode.qt">Gamma ≈1.961 (QuickTime-like)</span>
+        </label>
+        <label>
+          <input type="radio" data-pref-key name="defaultGamma" value="gamma22">
+          <span data-i18n="mode.gamma22">Gamma 2.2</span>
+        </label>
+        <label>
+          <input type="radio" data-pref-key name="defaultGamma" value="gamma24">
+          <span data-i18n="mode.gamma24">Gamma 2.4</span>
+        </label>
+      </fieldset>
+      <p class="secondary pref-help" data-i18n="defaultNote">Applies to new playback windows. Existing windows retain their selection, including when a new video is loaded in the same window.</p>
+    </section>
+    <hr>
+    <section class="pref-section">
+      <p class="secondary" data-i18n-html="iccNote">Enable <strong>Load ICC profile</strong> in <strong>Settings… → Video → Color and HDR</strong> to display the video correctly.</p>
+    </section>
+  </main>
+</body>
+</html>
