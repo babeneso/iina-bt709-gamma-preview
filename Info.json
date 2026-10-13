@@ -2,6 +2,8 @@
   "name": "BT.709 Gamma Preview",
   "identifier": "io.github.babeneso.iina-bt709-gamma-preview",
   "version": "0.2.0",
+  "ghRepo": "babeneso/iina-bt709-gamma-preview",
+  "ghVersion": 1,
   "description": "Watch BT.709 SDR video with various gamma modes and switch between them during playback to preview how contrast looks in different viewing environments.",
   "author": {
     "name": "Neso"
