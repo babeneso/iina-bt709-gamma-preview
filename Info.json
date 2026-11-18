@@ -1,0 +1,42 @@
+{
+  "name": "BT.709 Gamma Preview",
+  "identifier": "io.github.babeneso.iina-bt709-gamma-preview",
+  "version": "1.0.0",
+  "ghRepo": "babeneso/iina-bt709-gamma-preview",
+  "ghVersion": 1,
+  "description": "Switch the playback gamma of BT.709 video",
+  "author": {
+    "name": "Neso"
+  },
+  "entry": "main.js",
+  "preferencesPage": "preferences.html",
+  "helpPage": "help.html",
+  "preferenceDefaults": {
+    "defaultGamma": "mpv"
+  },
+  "permissions": [
+    "show-osd",
+    "file-system",
+    "show-alert"
+  ],
+  "sidebarTab": {
+    "name": "BT.709 Gamma Preview"
+  },
+  "localized": {
+    "en": {
+      "name": "BT.709 Gamma Preview",
+      "description": "Switch the playback gamma of BT.709 video",
+      "sidebarTab": {
+        "name": "BT.709 Gamma Preview"
+      }
+    },
+    "zh-Hant": {
+      "name": "BT.709 Gamma 預覽",
+      "description": "切換 BT.709 影片的播放 gamma",
+      "sidebarTab": {
+        "name": "BT.709 Gamma 預覽"
+      }
+    }
+  },
+  "global": "global.js"
+}
